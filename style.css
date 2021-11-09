@@ -1,0 +1,94 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;900&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  background-color: #242333;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  font-size: 1.5rem;
+}
+.movie-container {
+  margin: 20px 0;
+}
+.movie-container select {
+  background-color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: bold;
+  margin-left: 2rem;
+}
+.container {
+  perspective: 1000px;
+  margin-bottom: 1.5rem;
+}
+.seat {
+  height: 2rem;
+  width: 2rem;
+  background-color: #444451;
+  margin: 0 8px 8px;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+}
+.seat.selected {
+  background-color: #6faef6;
+}
+.seat.occupied {
+  background-color: white;
+}
+.seat:nth-of-type(2) {
+  margin-right: 3rem;
+}
+.seat:nth-last-of-type(2) {
+  margin-left: 3rem;
+}
+.seat:not(.occupied):hover {
+  cursor: pointer;
+  transform: scale(1.2);
+}
+.showcase .seat:not(.occupied):hover {
+  cursor: default;
+  transform: scale(1);
+}
+.row {
+  display: flex;
+}
+.showcase {
+  background-color: rgb(0, 0, 0, 0.1);
+  padding: 0.5rem 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+  list-style: none;
+  color: #777;
+}
+.showcase li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 1rem;
+}
+.screen {
+  background-color: #fff;
+  height: 10rem;
+  width: 100%;
+  margin: 2rem 0;
+  transform: rotateX(-45deg);
+  box-shadow: 0 0 1.5rem rgba(255, 255, 255, 0.8);
+}
+p.text span {
+  color: #6faef6;
+}
